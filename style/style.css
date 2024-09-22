@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: calibri;
+    outline: none;
+    word-wrap: break-word;
+}
+*::-webkit-scrollbar {
+    background-color: #ccc;
+    width: .1rem;
+}
+body {
+    width: 100%;
+    background-color: #0f2843;
+    color: #999;
+}
+/*Main container*/
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #000;
+    width: 95%;
+    box-sizing: border-box;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+#header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#header h1 {
+    font-style: italic;
+    font-size: 2.5em;
+}
+/*Input and button*/
+#inputAndBtn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#mainInput {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    box-sizing: border-box;
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ccc;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+#btnAdd {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transition: 400ms;
+    background-color: #999;
+}
+#btnAdd:hover, #btnAdd:focus, #btnAdd:active {
+    transition: 400ms;
+    background-color: #248eff;
+}
+/*Alert Message*/
+#alertMessage {
+    margin: .25rem auto auto auto;
+}
+/*Task area*/
+#taskArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#dialogEdit {
+    width: 100%;
+}
+#dialogDelete {
+    width: 100%;
+}
+#taskContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .5rem;
+    margin: .5rem auto auto auto;
+    border-radius: .5rem;
+}
+.allTaskParagraph {
+    overflow-y: auto;
+    max-height: 10rem;
+    background-color: #333;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    padding: .25rem;
+    text-align: justify;
+}
+#taskParagraphsAndInput {
+    width: 100%;
+}
+#taskParagraphCheckbox {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: .5rem auto .5rem auto;
+    border: none;
+    color: #111;
+    border-radius: .25rem;
+    background: #000;
+}
+#taskParagraphCheckbox p {
+    width: 60%;
+}
+#taskBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#taskBtns button {
+    width: 49.8%;
+    height: 1.5rem;
+    border: none;
+    transition: 400ms;
+    background-color: #ccc;
+}
+#taskBtns button:first-child:hover,
+#taskBtns button:first-child:focus,
+#taskBtns button:first-child:active {
+    transition: 400ms;
+    background-color: #248eff;
+}
+#taskBtns button:last-child:hover,
+#taskBtns button:last-child:focus,
+#taskBtns button:last-child:active {
+    transition: 400ms;
+    background-color: #ff0000;
+}
+#taskBtns button:first-child {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+#taskBtns button:last-child {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+/*Modal windows*/
+#modalWindowEdit {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+#modalWindowEditMainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    background-color: #222;
+    box-sizing: border-box;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+#modalWindowEditMainDiv input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    box-sizing: border-box;
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ccc;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+#modalWindowEditBtn {
+    display: flex;
+    width: 100%;
+}
+#modalWindowEditBtn button {
+    width: 49.8%;
+    justify-content: space-between;
+    border: none;
+    height: 2.5rem;
+    margin: .5rem auto auto auto;
+    transition: 400ms;
+    background-color: #ccc;
+}
+#modalWindowEditBtn button:first-child {
+    border-bottom-left-radius: .5rem;
+}
+#modalWindowEditBtn button:first-child:hover, 
+#modalWindowEditBtn button:first-child:focus, 
+#modalWindowEditBtn button:first-child:active {
+    transition: 400ms;
+    background-color: #248eff;;
+}
+#modalWindowEditBtn button:last-child {
+    border-bottom-right-radius: .5rem;
+}
+#modalWindowEditBtn button:last-child:hover, 
+#modalWindowEditBtn button:last-child:focus, 
+#modalWindowEditBtn button:last-child:active {
+    transition: 400ms;
+    background-color: #ff0000;;
+}
+#modalWindowDelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+#modalWindowDeleteMainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    background-color: #222;
+    box-sizing: border-box;
+    padding: .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    color: #999;
+}
+#modalWindowDeleteBtn {
+    display: flex;
+    width: 100%;
+}
+#modalWindowDeleteBtn button {
+    width: 49.8%;
+    justify-content: space-between;
+    border: none;
+    height: 2.5rem;
+    margin: .5rem auto auto auto;
+    transition: 400ms;
+    background-color: #ccc;
+}
+#modalWindowDeleteBtn button:first-child {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+#modalWindowDeleteBtn button:first-child:hover, 
+#modalWindowDeleteBtn button:first-child:focus, 
+#modalWindowDeleteBtn button:first-child:active {
+    transition: 400ms;
+    background-color: #ff0000;
+}
+#modalWindowDeleteBtn button:last-child {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+#modalWindowDeleteBtn button:last-child:hover, 
+#modalWindowDeleteBtn button:last-child:focus, 
+#modalWindowDeleteBtn button:last-child:active {
+    transition: 400ms;
+    background-color: #248eff;
+}
+#modalWindowEdit, #modalWindowDelete {
+    backdrop-filter: blur(5px);
+}
+
+/*Responsive*/
+
+/*Tablets*/
+@media screen and (min-width: 758px) {
+    #alertMessage {
+        margin: .25rem auto auto auto;
+    }
+    #taskArea {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: .5rem .5rem;
+        box-sizing: border-box;
+        margin-top: .5rem;
+    }
+    #taskContainer {
+        max-width: 24%;
+        margin: 0 0 0 0;
+        align-self: flex-end;
+    }
+};
+
+/*Pc*/
+@media screen and (min-width: 1024px) {
+    #taskContainer {
+        font-size: 1.5rem;
+    }
+};
