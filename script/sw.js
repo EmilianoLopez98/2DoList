@@ -6,7 +6,9 @@ const urlsToCache = [
   '/style/style.css',
   '/script/script.js',
   './images/ToDoList192x192.png',
-  './images/ToDoList512x512.png'
+  './images/ToDoList512x512.png',
+  './screenshot/DesktopView.png',
+  './screenshot/MobileView.png'
 ];
 
 self.addEventListener('install', event => {
